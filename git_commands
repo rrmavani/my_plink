@@ -16,4 +16,5 @@ git remote add [shortname] [url] #Add remote repository
 git remote #View remote repository
 git remote -v #View remote repository with URL
 
-
+git fetch origin #fetches any new work that has been pushed to that server since you cloned (or last fetched from) it.
+git pull #automatically fetch and then merge a remote branch into your current branch.
