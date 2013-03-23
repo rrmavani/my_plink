@@ -10,3 +10,10 @@ git log -p -<n> #Show last n logs with diff
 git reset HEAD <file> #Unstage a staged file
 git checkout -- <file> #Discard changes in working directory
 
+--------------
+
+git remote add [shortname] [url] #Add remote repository
+git remote #View remote repository
+git remote -v #View remote repository with URL
+
+
