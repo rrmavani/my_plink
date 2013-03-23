@@ -5,3 +5,5 @@ git diff #To see what has been changed but not yet staged
 git diff --staged #compares your staged changes to your last commit
 git rm <filename> #Remove file from tracking and deleted from hard-drive
 git rm --cached <filename> #Remove file from tracking but keep in hard-drive
+git log #Show changes comment
+git log -p -<n> #Show last n logs with diff
