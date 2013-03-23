@@ -7,3 +7,6 @@ git rm <filename> #Remove file from tracking and deleted from hard-drive
 git rm --cached <filename> #Remove file from tracking but keep in hard-drive
 git log #Show changes comment
 git log -p -<n> #Show last n logs with diff
+git reset HEAD <file> #Unstage a staged file
+git checkout -- <file> #Discard changes in working directory
+
