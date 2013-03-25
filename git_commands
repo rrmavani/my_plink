@@ -7,6 +7,7 @@ git rm <filename> #Remove file from tracking and deleted from hard-drive
 git rm --cached <filename> #Remove file from tracking but keep in hard-drive
 git log #Show changes comment
 git log -p -<n> #Show last n logs with diff
+git log --pretty=oneline #Show commits in one line
 git reset HEAD <file> #Unstage a staged file
 git checkout -- <file> #Discard changes in working directory
 
@@ -23,3 +24,8 @@ git push origin master #push your local changes to repo origin from local master
 
 git remote rename origin new_origin #Change remote's short name
 git remote rm origin #Remove referance of origin repo
+
+git tag #To list the tags
+git tag -a <version> -m "message" #Create tag
+git show <version> #to view full detail of perticular tag
+git push origin <version> #Push to remote repo
