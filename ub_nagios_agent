@@ -1,0 +1,20 @@
+user {'nagios':
+        name => 'nagios',
+        home => '/var/log/nagios',
+        managehome => true ,
+        system => true,
+        ensure => 'present',
+}
+
+ssh_authorized_key {'nagios_key':
+        ensure => 'present',
+        key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAsn5MnLMlkxi3v1tYtKZC/BCMNXq0imP0al7nTXtPg+SQeCJ2BoRqpmEoM7J5koCpGHL5EmrXdbXq6XWpW65RFIQnUgIhMlzl/WICOrrLCxgRJiEPuDN22vaSf5fNZN/BcFooplooGx26F+iNCfb7SDBJeXHdbmjFaj4JWVeltXQPlmU7+33ucpgkMoeJgk316ZXC7MZNUX30+ok0NncKYdnZVX7InalE9lSFjAeAxJrE4JMi6w7I9ytwgNFe3hhcMlVI68NUhC5/sCs3mzFB/WyPPmf0QeinmFJ9fTvdp1LyuuMSK2EvC7tl4Z0BvLQ01V3wAG4zcD2HF8PrOdPCIQ==",
+        user => 'nagios',
+        type => 'ssh-rsa',
+        options => ['no-pty', 'no-X11-forwarding', 'no-port-forwarding', 'command="/usr/local/check_mk/bin/check_mk_agent"']
+}
+
+package {'check_mk_agent':
+        name => 'ub-check_mk_agent.noarch',
+        ensure => present,
+}
